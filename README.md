@@ -8,7 +8,7 @@ SouChef is a premium culinary application built with Flutter, designed to help u
 
 - [Features Overview](#-features-overview)
 - [Project Structure](#-project-structure)
-- [Architecture & Tech Stack] (#-architecture--tech-stack)   
+- [Architecture & Tech Stack](#-architecture--tech-stack)   
 - [Module Breakdown](#-module-breakdown)
 - [Screenshots Gallery](#-screenshots-gallery)
 - [Installation & Setup](#-installation--setup)
@@ -33,18 +33,40 @@ The project is organized to promote modularity and scalability, separating core 
 
 ```
 lib/
-├── core/                  # Shared resources accessible across the app
-│   ├── them/              # Design system: Colors, Typography, Theme data
-│   ├── utils/             # Helper functions, Constants, Extensions
-│   └── widgets/           # Global reusable widgets (Buttons, Inputs, Loaders)
+├── core/                                # 🧱 Core Layer: Shared resources across the app
+│   ├── them/                            # 🎨 Theme Configuration
+│   │   └── app_theme.dart               # Light/Dark mode and text styles
+│   ├── utils/                           # 🛠️ Utilities
+│   │   └── constants.dart               # Global constants (API keys, strings)
+│   └── widgets/                         # 🧩 Common Widgets
+│       ├── custom_button.dart           # Reusable styled buttons
+│       └── custom_textfield.dart        # Standardized input fields
 │
-├── features/              # Self-contained modules for each functional area
-│   ├── authentification/  # Auth flows (Login, Sign Up)
-│   ├── home/              # Main dashboard, Recipe feed, Chef lists
-│   ├── intro/             # Onboarding flow and Splash screens
-│   └── profile/           # User settings and Profile management
+├── features/                            # 🚀 Features Layer: Modular functionality
+│   ├── authentification/                # 🔐 Authentication Module
+│   │   ├── model/                       # User data models
+│   │   ├── view/                        # UI: Login & Sign Up screens
+│   │   │   ├── login_view.dart
+│   │   │   └── sign_up_view.dart
+│   │   └── viewmodel/                   # Logic: Auth state & Firebase calls
+│   │
+│   ├── home/                            # 🏠 Home & Discovery Module
+│   │   ├── model/                       # Data: Recipe, Chef models
+│   │   ├── view/                        # UI: Home dashboard, Details
+│   │   │   ├── home_view.dart
+│   │   │   └── recipe_detail_view.dart
+│   │   └── viewmodel/                   # Logic: Fetching recipes, favorites
+│   │
+│   ├── intro/                           # 👋 Onboarding Module
+│   │   ├── view/                        # Splash & Welcome screens
+│   │   └── viewmodel/                   # Logic: First-run checks
+│   │
+│   └── profile/                         # 👤 User Profile Module
+│       ├── view/                        # Profile settings UI
+│       └── viewmodel/                   # Logic: Profile updates
 │
-└── main.dart              # Application entry point and Provider scope
+├── firebase_options.dart                # 🔥 Firebase Generated Config
+└── main.dart                            # 🏁 App Entry Point & Provider Setup
 ```
 
 ---
