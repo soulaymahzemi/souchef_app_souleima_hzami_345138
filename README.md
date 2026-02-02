@@ -8,7 +8,7 @@ SouChef is a premium culinary application built with Flutter, designed to help u
 
 - [Features Overview](#-features-overview)
 - [Project Structure](#-project-structure)
-- [Architecture & Tech Stack](#-architecture--tech-stack)
+- [Architecture & Tech Stack] (#-architecture--tech-stack)   
 - [Module Breakdown](#-module-breakdown)
 - [Screenshots Gallery](#-screenshots-gallery)
 - [Installation & Setup](#-installation--setup)
