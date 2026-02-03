@@ -1,4 +1,4 @@
-# SouChef 👨‍🍳
+# SouChef 👨‍🍳-Flutter App
 
 SouChef is a premium culinary application built with Flutter, designed to help users discover recipes, follow professional chefs, and master the art of cooking. With a focus on a modern, intuitive user experience, SouChef leverages the MVVM architecture and robust state management to deliver a seamless performance.
 
