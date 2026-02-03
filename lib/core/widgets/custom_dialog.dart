@@ -4,7 +4,7 @@ import '../them/color.dart';
 import '../them/text_style.dart';
 
 class CustomDialog {
-  /// Affiche un dialog de confirmation avec deux boutons
+
   static Future<bool?> showConfirmation({
     required BuildContext context,
     required String title,
@@ -44,7 +44,7 @@ class CustomDialog {
     );
   }
 
-  /// Affiche un dialog avec un champ de texte
+
   static Future<String?> showInput({
     required BuildContext context,
     required String title,
@@ -108,7 +108,7 @@ class CustomDialog {
     );
   }
 
-  /// Affiche un dialog d'information simple
+
   static Future<void> showInfo({
     required BuildContext context,
     required String title,

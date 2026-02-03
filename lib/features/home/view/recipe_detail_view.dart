@@ -74,7 +74,7 @@ class _RecipeDetailViewState extends State<RecipeDetailView> {
       backgroundColor: white,
       body: CustomScrollView(
         slivers: [
-          // 🖼️ Flexible App Bar with Image
+
           SliverAppBar(
             expandedHeight: 350.h,
             pinned: true,
@@ -123,7 +123,7 @@ class _RecipeDetailViewState extends State<RecipeDetailView> {
             ),
           ),
 
-          // 📝 Content
+
           SliverToBoxAdapter(
             child: Container(
               decoration: BoxDecoration(
@@ -135,7 +135,7 @@ class _RecipeDetailViewState extends State<RecipeDetailView> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Title & Category
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -162,7 +162,7 @@ class _RecipeDetailViewState extends State<RecipeDetailView> {
 
                     SizedBox(height: 32.h),
 
-                    // Stats Row (Mock values for design)
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -174,7 +174,7 @@ class _RecipeDetailViewState extends State<RecipeDetailView> {
 
                     SizedBox(height: 32.h),
 
-                    // Ingredients
+
                     Text("Ingredients", style: titleTextStyle.copyWith(fontSize: 18.sp)),
                     SizedBox(height: 16.h),
                     ListView.separated(
@@ -200,7 +200,7 @@ class _RecipeDetailViewState extends State<RecipeDetailView> {
 
                     SizedBox(height: 32.h),
 
-                    // Instructions
+
                     Text("Instructions", style: titleTextStyle.copyWith(fontSize: 18.sp)),
                     SizedBox(height: 16.h),
                     Text(

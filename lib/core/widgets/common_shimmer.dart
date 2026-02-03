@@ -3,7 +3,7 @@ import 'package:shimmer/shimmer.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:esame/core/them/color.dart';
 
-/// A base wrapper for shimmer effects
+
 class AppShimmer extends StatelessWidget {
   final Widget child;
   const AppShimmer({super.key, required this.child});
@@ -18,7 +18,7 @@ class AppShimmer extends StatelessWidget {
   }
 }
 
-/// A rectangular shimmer block
+
 class ShimmerContainer extends StatelessWidget {
   final double? width;
   final double height;
@@ -47,7 +47,7 @@ class ShimmerContainer extends StatelessWidget {
   }
 }
 
-/// A circular shimmer block
+
 class ShimmerCircle extends StatelessWidget {
   final double size;
   final EdgeInsetsGeometry? margin;
@@ -72,7 +72,7 @@ class ShimmerCircle extends StatelessWidget {
   }
 }
 
-/// A text-replacement shimmer block
+
 class ShimmerText extends StatelessWidget {
   final double width;
   final double height;

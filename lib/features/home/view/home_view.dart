@@ -46,23 +46,23 @@ class _HomeViewState extends State<HomeView> {
 
             return LayoutBuilder(
               builder: (context, constraints) {
-                // Determine the number of columns based on width
+
                 int crossAxisCount = 1;
                 if (constraints.maxWidth > 900) {
-                  crossAxisCount = 3; // Web/Desktop Large
+                  crossAxisCount = 3;
                 } else if (constraints.maxWidth > 600) {
-                  crossAxisCount = 2; // Tablet or Landscape
+                  crossAxisCount = 2;
                 }
 
                 return OrientationBuilder(
                   builder: (context, orientation) {
                     bool isLandscape = orientation == Orientation.landscape;
-                    // Ensure at least 2 columns in landscape if width > 400
+
                     if (isLandscape && crossAxisCount < 2) crossAxisCount = 2;
 
                     return CustomScrollView(
                       slivers: [
-                        // Header Section
+
                         SliverToBoxAdapter(
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(24.w, 24.h, 24.w, 0),
@@ -87,7 +87,7 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
 
-                        // Search & Categories
+
                         SliverPersistentHeader(
                           pinned: true,
                           delegate: StickyHeaderDelegate(
@@ -159,7 +159,7 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
 
-                        // Popular Recipes
+
                         if (viewModel.popularRecipes.isNotEmpty) ...[
                           SliverToBoxAdapter(
                             child: Padding(
@@ -189,7 +189,7 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ],
 
-                        // Recipes Title
+
                         SliverToBoxAdapter(
                           child: Padding(
                             padding: EdgeInsets.fromLTRB(24.w, 32.h, 24.w, 16.h),

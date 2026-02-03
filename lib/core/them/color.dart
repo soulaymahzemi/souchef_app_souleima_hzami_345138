@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-// Light Mode Colors (existing)
+
 const Color primary = Color(0xFF227BD3);
 const Color secondary = Color(0xffED7308);
 const Color third = Color(0xFF829BFB);

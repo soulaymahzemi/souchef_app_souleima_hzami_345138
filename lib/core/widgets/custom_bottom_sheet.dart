@@ -33,7 +33,7 @@ class CustomBottomSheet {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            // Handle indicator
+
             Container(
               width: 40.w,
               height: 4.h,
@@ -44,14 +44,14 @@ class CustomBottomSheet {
             ),
             SizedBox(height: 20.h),
             
-            // Title
+
             Text(
               title,
               style: titleTextStyle.copyWith(fontSize: 18.sp),
             ),
             SizedBox(height: 20.h),
             
-            // Options
+
             ...options.map((option) => Column(
               children: [
                 ListTile(

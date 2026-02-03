@@ -13,7 +13,7 @@ class ChefViewModel extends ChangeNotifier {
   bool get isLoading => _isLoading;
   String? get error => _error;
   
-  // Getters pour les statistiques de follow
+
   Set<String> get followingIds => _followingIds;
   int get followingCount => _followingIds.length;
   
@@ -40,7 +40,7 @@ class ChefViewModel extends ChangeNotifier {
     notifyListeners();
 
     try {
-      // Fetch from different cuisine areas to simulate different chefs
+
       final areas = ['Italian', 'Mexican', 'Chinese', 'Indian', 'Japanese', 'French', 'American', 'Thai'];
       List<ChefModel> allChefs = [];
 

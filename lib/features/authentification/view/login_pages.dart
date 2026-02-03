@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: white,
       body: Stack(
         children: [
-          // 🔝 Image du haut
+
           Positioned(
             top: 0,
             left: 0,
@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
 
-          // 📄 Card blanche
+
           Positioned.fill(
             top: 0.35.sh,
             child: Container(
@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      // Title
+
                       Text(
                         'Sign In',
                         style: titleTextStyle.copyWith(
@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       SizedBox(height: 32.h),
 
-                      // Email Field
+
                       CustomTextField(
                         controller: emailController,
                         labelText: 'Email',
@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       SizedBox(height: 24.h),
 
-                      // Password Field
+
                       CustomTextField(
                         controller: passwordController,
                         labelText: 'Password',
@@ -134,9 +134,9 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       
-                      SizedBox(height: 20.h), // Adjusted spacing
+                      SizedBox(height: 20.h),
 
-                      // Sign In Button
+
                       CustomButton(
                         text: 'Signin',
                         isLoading: loginViewModel.isLoading,
@@ -145,15 +145,15 @@ class _LoginPageState extends State<LoginPage> {
                             String email = emailController.text.trim();
                             String password = passwordController.text.trim();
 
-                            // Call LoginViewModel
+
                             final errorMessage = await loginViewModel.loginUser(email, password);
 
                             if (errorMessage == null) {
-                              // Clear inputs
+
                               emailController.clear();
                               passwordController.clear();
 
-                              // Show success message
+
                               if (context.mounted) {
                                 SnackBarHelper.showSuccess(
                                   context,

@@ -33,7 +33,7 @@ class ProfileView extends StatelessWidget {
         builder: (context, loginVM, child) {
           final user = loginVM.currentUser;
 
-          // Si pas d'utilisateur connecté
+
           if (user == null) {
             return Center(
               child: Column(
@@ -80,14 +80,14 @@ class ProfileView extends StatelessWidget {
             );
           }
 
-          // Affichage du profil utilisateur connecté
+
           return SingleChildScrollView(
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
             child: Column(
               children: [
                 SizedBox(height: 20.h),
                 
-                // Photo de profil - Cliquable pour changer
+
                 GestureDetector(
                   onTap: () => _showChangePhotoDialog(context),
                   child: Stack(
@@ -118,7 +118,7 @@ class ProfileView extends StatelessWidget {
                 
                 SizedBox(height: 24.h),
                 
-                // Nom de l'utilisateur
+
                 Text(
                   user.displayName ?? 'User',
                   style: titleTextStyle.copyWith(
@@ -129,7 +129,7 @@ class ProfileView extends StatelessWidget {
                 
                 SizedBox(height: 8.h),
                 
-                // Email
+
                 Text(
                   user.email ?? '',
                   style: bodyTextStyle.copyWith(
@@ -140,7 +140,7 @@ class ProfileView extends StatelessWidget {
                 
                 SizedBox(height: 24.h),
                 
-                // Statistiques - Favoris et Suivis
+
                 Consumer2<RecipeViewModel, ChefViewModel>(
                   builder: (context, recipeVM, chefVM, child) {
                     return Container(
@@ -152,7 +152,7 @@ class ProfileView extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          // Favoris
+
                           _buildStatItem(
                             icon: Icons.favorite,
                             count: recipeVM.favoriteRecipes.length,
@@ -166,7 +166,7 @@ class ProfileView extends StatelessWidget {
                             color: empty.withOpacity(0.3),
                           ),
                           
-                          // Chefs suivis
+
                           _buildStatItem(
                             icon: Icons.people,
                             count: chefVM.followingCount,
@@ -181,7 +181,7 @@ class ProfileView extends StatelessWidget {
                 
                 SizedBox(height: 30.h),
                 
-                // Options du profil - Widgets réutilisables
+
                 ProfileOption(
                   icon: Icons.camera_alt_outlined,
                   title: 'Change Photo',
@@ -199,7 +199,7 @@ class ProfileView extends StatelessWidget {
           
                 SizedBox(height: 30.h),
                 
-                // Bouton Déconnexion - Widget réutilisable
+
                 LogoutButton(
                   onPressed: () => _showLogoutDialog(context),
                 ),
@@ -222,7 +222,7 @@ class ProfileView extends StatelessWidget {
     );
     
     if (newName != null && newName.isNotEmpty && newName != currentName) {
-      // Mettre à jour le nom dans le ViewModel
+
       context.read<LoginViewModel>().updateDisplayName(newName);
       
       SnackBarHelper.showInfo(
@@ -266,7 +266,7 @@ class ProfileView extends StatelessWidget {
       if (image != null && context.mounted) {
         context.read<LoginViewModel>().updateProfileImage(image.path);
         
-        // Afficher un message de succès
+
         SnackBarHelper.showSuccess(
           context,
           'Profile photo updated',

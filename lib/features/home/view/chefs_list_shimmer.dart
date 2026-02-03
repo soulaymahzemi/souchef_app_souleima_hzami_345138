@@ -11,13 +11,13 @@ class ChefsListShimmer extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header Section Shimmer
+
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
             child: const ShimmerText(width: 200, height: 14),
           ),
 
-          // Chefs List Shimmer
+
           Expanded(
             child: ListView.builder(
               padding: EdgeInsets.symmetric(horizontal: 15.w),
@@ -32,11 +32,11 @@ class ChefsListShimmer extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                      // Chef Image Shimmer
+
                       const ShimmerCircle(size: 70),
                       SizedBox(width: 15.w),
 
-                      // Chef Info Shimmer
+
                       const Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +56,7 @@ class ChefsListShimmer extends StatelessWidget {
                         ),
                       ),
 
-                      // Follow Button Shimmer
+
                       ShimmerContainer(
                         width: 80.w,
                         height: 35.h,

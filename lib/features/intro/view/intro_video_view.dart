@@ -29,7 +29,7 @@ class _IntroVideoBody extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          /// 🖼️ Image background
+
           SizedBox.expand(
             child: Image.asset(
               viewModel.backgroundImage,
@@ -37,10 +37,10 @@ class _IntroVideoBody extends StatelessWidget {
             ),
           ),
 
-          /// Dark overlay
+
           Container(color: Colors.black.withOpacity(0.55)),
 
-          /// Content
+
           Positioned.fill(
             child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -67,7 +67,7 @@ class _IntroVideoBody extends StatelessWidget {
                 ),
                 SizedBox(height: 40.h),
 
-                /// Login
+
                 CustomButton(
                   text: "Login",
                   onPressed: () {
@@ -81,7 +81,7 @@ class _IntroVideoBody extends StatelessWidget {
                 ),
                 SizedBox(height: 16.h),
 
-                /// Register
+
                 CustomButton(
                   text: "Register",
                   onPressed: () {

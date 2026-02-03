@@ -90,6 +90,15 @@ This project strictly follows the **MVVM (Model-View-ViewModel)** architectural 
 | **Networking** | HTTP | API communication |
 | **UI/UX** | ScreenUtil | Responsive design adaptation |
 
+### 🛠️ Key Packages & Dependencies
+
+- **flutter_screenutil**: A flutter plugin for adapting screen and font size. It guarantees that the UI looks consistent (pixel-perfect) on different screen sizes (mobile, tablet) by scaling widgets proportionally.
+- **http**: A composable, Future-based library for making HTTP requests. We use it to communicate with remote APIs (e.g., fetching recipe data and chef lists) asynchronously.
+- **shimmer**: A package provides an easy way to add a shimmer effect. We use this to show a loading skeleton animation (grey placeholders) instead of a simple spinner while data is being fetched, improving the perceived performance.
+- **shared_preferences**: Wraps platform-specific persistent storage for simple data (NSUserDefaults on iOS, SharedPreferences on Android). It is used for storing lightweight local data, such as user settings, flags (e.g., "onboarding seen"), or caching favorites.
+- **provider**: A wrapper around InheritedWidget to make them easier to use and more reusable. It is our primary state management solution, allowing ViewModels to notify Views when data changes.
+- **url_launcher**: A Flutter plugin for launching a URL. We use this to open external links, specifically to play YouTube videos for recipes.
+
 ---
 
 ## 📦 Module Breakdown
@@ -118,11 +127,31 @@ Personalization hub for the user.
 
 ## 📸 Screenshots Gallery
 
-| Login | Home |
+
+| Welcome | Login |
 |:---:|:---:|
-| ![Login Screen](assets/screenshots/login_screen.png) | ![Home Screen](assets/screenshots/home_screen.png) |
-| **Recipe Detail** | **Profile** |
-| ![Recipe Detail](assets/screenshots/recipe_detail.png) | ![Profile Screen](assets/screenshots/profile_screen.png) |
+| ![Welcome Screen](assets/screenshots/welcome_screen.png) | ![Login Screen](assets/screenshots/sign_in_screen.png) |
+| _Welcome page introducing the app_ | _Login screen allowing user authentication_ |
+
+| Sign Up | Forgot Password |
+|:---:|:---:|
+| ![Sign Up Screen](assets/screenshots/sign_up.png) | ![Forgot Password](assets/screenshots/forgot_password.png) |
+| _Sign up screen with password creation and validation_ | _Password recovery page for account access_ |
+
+| Home | Favorites |
+|:---:|:---:|
+| ![Home Screen](assets/screenshots/home_screen.png) | ![Favorites Screen](assets/screenshots/favorites_screen.png) |
+| _Main home screen displaying recipes overview_ | _User favorite recipes list_ |
+
+| Recipe Detail | Reels |
+|:---:|:---:|
+| ![Recipe Detail](assets/screenshots/recipe_detail.png) | ![Reels Screen](assets/screenshots/reels_screen.png) |
+| _Detailed recipe view with ingredients and steps_ | _Short cooking reels and video content_ |
+
+| Chefs List | Profile |
+|:---:|:---:|
+| ![Chefs List](assets/screenshots/chefs_list.png) | ![Profile Screen](assets/screenshots/profile_screen.png) |
+| _List of chefs and creators_ | _User profile and personal settings_ |
 
 ---
 

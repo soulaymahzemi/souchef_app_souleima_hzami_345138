@@ -27,10 +27,10 @@ class _RecipeVideoReelState extends State<RecipeVideoReel> {
   }
 
   void _initWebView() {
-    // Extract YouTube video ID from URL
+
     final videoId = _extractYoutubeId(widget.recipe.youtubeUrl);
     
-    // Use mobile YouTube URL for better compatibility
+
     final mobileUrl = 'https://m.youtube.com/watch?v=$videoId';
 
     _controller = WebViewController()
@@ -67,7 +67,7 @@ class _RecipeVideoReelState extends State<RecipeVideoReel> {
     return Stack(
       fit: StackFit.expand,
       children: [
-        // YouTube Video WebView or Web Fallback
+
         Container(
           color: black,
           child: kIsWeb 
@@ -94,7 +94,7 @@ class _RecipeVideoReelState extends State<RecipeVideoReel> {
             : WebViewWidget(controller: _controller),
         ),
 
-        // Loading Indicator
+
         if (_isLoading)
           Container(
             color: black,
@@ -110,7 +110,7 @@ class _RecipeVideoReelState extends State<RecipeVideoReel> {
             ),
           ),
 
-        // Gradient Overlay (Bottom)
+
         Positioned(
           bottom: 0,
           left: 0,
@@ -129,7 +129,7 @@ class _RecipeVideoReelState extends State<RecipeVideoReel> {
           ),
         ),
 
-        // Recipe Info
+
         Positioned(
           bottom: 15.h,
           left: 15.w,
@@ -175,7 +175,7 @@ class _RecipeVideoReelState extends State<RecipeVideoReel> {
           ),
         ),
 
-        // Side Buttons
+
         Positioned(
           bottom: 50.h,
           right: 10.w,

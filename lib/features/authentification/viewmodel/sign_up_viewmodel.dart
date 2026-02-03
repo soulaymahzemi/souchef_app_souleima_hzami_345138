@@ -15,7 +15,7 @@ class SignUpViewmodel extends ChangeNotifier {
         password: password,
       );
 
-      // Update display name
+
       if (userCredential.user != null) {
         await userCredential.user!.updateDisplayName(name);
         await userCredential.user!.reload();
@@ -23,7 +23,7 @@ class SignUpViewmodel extends ChangeNotifier {
 
       isLoading = false;
       notifyListeners();
-      return null; // Success
+      return null;
     } on FirebaseAuthException catch (e) {
       print('Firebase Auth Error: ${e.code} - ${e.message}');
       isLoading = false;

@@ -66,7 +66,7 @@ class _ChefsListViewState extends State<ChefsListView> {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header Section
+
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
                 child: Text(
@@ -75,7 +75,7 @@ class _ChefsListViewState extends State<ChefsListView> {
                 ),
               ),
 
-              // Chefs List
+
               Expanded(
                 child: ListView.builder(
                   padding: EdgeInsets.symmetric(horizontal: 15.w),
@@ -100,7 +100,7 @@ class _ChefsListViewState extends State<ChefsListView> {
                       ),
                       child: Row(
                         children: [
-                          // Chef Image
+
                           Container(
                             width: 70.w,
                             height: 70.h,
@@ -115,7 +115,7 @@ class _ChefsListViewState extends State<ChefsListView> {
                           ),
                           SizedBox(width: 15.w),
 
-                          // Chef Info
+
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -151,7 +151,7 @@ class _ChefsListViewState extends State<ChefsListView> {
                             ),
                           ),
 
-                          // Follow Button
+
                           GestureDetector(
                             onTap: () => viewModel.toggleFollow(chef.id),
                             child: Container(

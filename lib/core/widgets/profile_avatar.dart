@@ -45,7 +45,7 @@ class ProfileAvatar extends StatelessWidget {
   }
 
   Widget _buildImage() {
-    // Check if it's a network URL
+
     if (imageUrl!.startsWith('http://') || imageUrl!.startsWith('https://')) {
       return Image.network(
         imageUrl!,
@@ -55,7 +55,7 @@ class ProfileAvatar extends StatelessWidget {
         errorBuilder: (_, __, ___) => _buildInitial(),
       );
     } 
-    // Otherwise assume it's a local file path
+
     else {
       return Image.file(
         File(imageUrl!),

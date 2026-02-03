@@ -10,7 +10,7 @@ class HomeShimmer extends StatelessWidget {
     return AppShimmer(
       child: CustomScrollView(
         slivers: [
-          // Header Shimmer
+
           SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.fromLTRB(24.w, 24.h, 24.w, 0),
@@ -25,7 +25,7 @@ class HomeShimmer extends StatelessWidget {
             ),
           ),
 
-          // Search Bar Shimmer
+
           SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.fromLTRB(24.w, 16.h, 24.w, 0),
@@ -33,7 +33,7 @@ class HomeShimmer extends StatelessWidget {
             ),
           ),
 
-          // Categories Shimmer
+
           SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.only(top: 16.h),
@@ -54,7 +54,7 @@ class HomeShimmer extends StatelessWidget {
             ),
           ),
 
-          // Popular Recipes Title Shimmer
+
           SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.fromLTRB(24.w, 24.h, 24.w, 16.h),
@@ -68,7 +68,7 @@ class HomeShimmer extends StatelessWidget {
             ),
           ),
 
-          // Popular Recipes Horizontal List Shimmer
+
           SliverToBoxAdapter(
             child: SizedBox(
               height: 220.h,
@@ -86,7 +86,7 @@ class HomeShimmer extends StatelessWidget {
             ),
           ),
 
-          // Featured Title Shimmer
+
           SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.fromLTRB(24.w, 32.h, 24.w, 16.h),
@@ -94,7 +94,7 @@ class HomeShimmer extends StatelessWidget {
             ),
           ),
 
-          // Recipes Grid/List Shimmer
+
           SliverPadding(
             padding: EdgeInsets.symmetric(horizontal: 24.w),
             sliver: SliverList(

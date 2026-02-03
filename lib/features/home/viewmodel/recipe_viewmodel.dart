@@ -6,7 +6,7 @@ import 'package:esame/features/home/model/recipe_model.dart';
 class RecipeViewModel extends ChangeNotifier {
   List<RecipeModel> _recipes = [];
   List<RecipeModel> _popularRecipes = [];
-  List<RecipeModel> _reelsRecipes = []; // Dedicated list for reels
+  List<RecipeModel> _reelsRecipes = [];
   List<String> _categories = [];
   String _selectedCategory = 'All';
   bool _isLoading = false;
@@ -14,7 +14,7 @@ class RecipeViewModel extends ChangeNotifier {
 
   List<RecipeModel> get recipes => _recipes;
   List<RecipeModel> get popularRecipes => _popularRecipes;
-  List<RecipeModel> get reelsRecipes => _reelsRecipes; // Getter for reels
+  List<RecipeModel> get reelsRecipes => _reelsRecipes;
   List<String> get categories => _categories;
   String get selectedCategory => _selectedCategory;
   bool get isLoading => _isLoading;
@@ -58,7 +58,7 @@ class RecipeViewModel extends ChangeNotifier {
     await Future.wait([
       fetchCategories(),
       fetchPopularRecipes(),
-      fetchRecipesByQuery('b'), // Initial recipes
+      fetchRecipesByQuery('b'),
     ]);
 
     _isLoading = false;
@@ -86,7 +86,7 @@ class RecipeViewModel extends ChangeNotifier {
   Future<void> fetchPopularRecipes() async {
     try {
       final response = await http.get(
-        Uri.parse('https://www.themealdb.com/api/json/v1/1/search.php?f=s'), // Fetching recipes starting with 's' for popular
+        Uri.parse('https://www.themealdb.com/api/json/v1/1/search.php?f=s'),
       );
       if (response.statusCode == 200) {
         final data = json.decode(response.body);

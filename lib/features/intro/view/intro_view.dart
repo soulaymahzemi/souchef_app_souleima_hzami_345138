@@ -26,7 +26,7 @@ class IntroView extends StatelessWidget {
               bool isLandscape = orientation == Orientation.landscape;
               
               if (isWide) {
-                // Side-by-side layout for large screens (Web/Tablet)
+
                 return Row(
                   children: [
                     Expanded(
@@ -126,7 +126,7 @@ class IntroView extends StatelessWidget {
                 );
               }
 
-              // Standard mobile layout (Column)
+
               return SingleChildScrollView(
                 child: SizedBox(
                   height: isLandscape ? 1.2.sh : 1.sh,

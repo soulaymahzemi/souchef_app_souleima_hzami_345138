@@ -6,10 +6,10 @@ class LoginViewModel extends ChangeNotifier {
   bool isLoading = false;
   final FirebaseAuth _auth = FirebaseAuth.instance;
   
-  // Getter pour l'utilisateur connecté
+
   User? get currentUser => _auth.currentUser;
 
-  // Vérifier si un utilisateur est connecté
+
   bool get isLoggedIn => _auth.currentUser != null;
 
   Future<String?> loginUser(String email, String password) async {
@@ -24,7 +24,7 @@ class LoginViewModel extends ChangeNotifier {
       
       isLoading = false;
       notifyListeners();
-      return null; // Success
+      return null;
     } on FirebaseAuthException catch (e) {
       print('Firebase Auth Error: ${e.code} - ${e.message}');
       isLoading = false;
@@ -52,7 +52,7 @@ class LoginViewModel extends ChangeNotifier {
     }
   }
 
-  // Mot de passe oublié
+
   Future<String?> resetPassword(String email) async {
     isLoading = true;
     notifyListeners();
@@ -62,7 +62,7 @@ class LoginViewModel extends ChangeNotifier {
       
       isLoading = false;
       notifyListeners();
-      return null; // Success
+      return null;
     } on FirebaseAuthException catch (e) {
       print('Reset Password Error: ${e.code} - ${e.message}');
       isLoading = false;
@@ -84,7 +84,7 @@ class LoginViewModel extends ChangeNotifier {
     }
   }
 
-  // Mettre à jour l'image de profil
+
   Future<void> updateProfileImage(String imageUrl) async {
     try {
       if (_auth.currentUser != null) {
@@ -97,7 +97,7 @@ class LoginViewModel extends ChangeNotifier {
     }
   }
 
-  // Mettre à jour le nom d'affichage
+
   Future<void> updateDisplayName(String name) async {
     try {
       if (_auth.currentUser != null) {
@@ -110,7 +110,7 @@ class LoginViewModel extends ChangeNotifier {
     }
   }
 
-  // Déconnexion
+
   Future<void> logout() async {
     await _auth.signOut();
     notifyListeners();

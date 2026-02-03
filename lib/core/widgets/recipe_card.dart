@@ -26,7 +26,7 @@ class RecipeCard extends StatelessWidget {
       builder: (context, viewModel, child) {
         bool isFav = viewModel.isFavorite(recipe.id);
         
-        // Wrap with GestureDetector for navigation
+
         return GestureDetector(
           onTap: () {
             Navigator.push(
@@ -43,9 +43,7 @@ class RecipeCard extends StatelessWidget {
   }
 
   Widget _buildCardContent(bool isFav, RecipeViewModel viewModel) {
-    // ------------------------------------------------------------
-    // 1. POPULAR (HORIZONTAL) LAYOUT
-    // ------------------------------------------------------------
+
     if (isPopular) {
       return Container(
         width: 180.w,
@@ -124,9 +122,7 @@ class RecipeCard extends StatelessWidget {
       );
     }
 
-    // ------------------------------------------------------------
-    // 2. FEATURED (VERTICAL) LAYOUT
-    // ------------------------------------------------------------
+
     return Container(
       margin: EdgeInsets.only(bottom: 16.h),
       decoration: BoxDecoration(

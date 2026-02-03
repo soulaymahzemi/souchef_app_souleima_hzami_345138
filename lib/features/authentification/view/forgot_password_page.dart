@@ -87,15 +87,15 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
 
                     if (context.mounted) {
                       if (errorMessage == null) {
-                        // Success
+
                         emailController.clear();
                         SnackBarHelper.showSuccess(
                           context,
                           "Reset link sent! Check your email.",
                         );
-                        Navigator.pop(context); // Go back to login
+                        Navigator.pop(context);
                       } else {
-                        // Error
+
                         SnackBarHelper.showError(
                           context,
                           errorMessage,

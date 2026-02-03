@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:esame/core/them/color.dart';
 
-/// Utilitaire pour afficher des SnackBars de manière cohérente dans toute l'application
+
 class SnackBarHelper {
-  /// Affiche un SnackBar de succès (vert)
+
   static void showSuccess(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -29,7 +29,7 @@ class SnackBarHelper {
     );
   }
 
-  /// Affiche un SnackBar d'erreur (rouge)
+
   static void showError(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -55,7 +55,7 @@ class SnackBarHelper {
     );
   }
 
-  /// Affiche un SnackBar d'information (secondaire)
+
   static void showInfo(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -81,7 +81,7 @@ class SnackBarHelper {
     );
   }
 
-  /// Affiche un SnackBar d'avertissement (orange)
+
   static void showWarning(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -107,7 +107,7 @@ class SnackBarHelper {
     );
   }
 
-  /// Affiche un SnackBar personnalisé
+
   static void showCustom(
     BuildContext context, {
     required String message,

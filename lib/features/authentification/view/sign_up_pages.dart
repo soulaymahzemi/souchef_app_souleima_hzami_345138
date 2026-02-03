@@ -25,7 +25,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   bool _obscurePassword = true;
 
-  // Validation flags
+
   bool _hasMinLength = false;
   bool _hasUppercase = false;
   bool _hasNumber = false;
@@ -71,7 +71,7 @@ class _SignUpPageState extends State<SignUpPage> {
       backgroundColor: white,
       body: Stack(
         children: [
-          // 🔝 Image du haut
+
           Positioned(
             top: 0,
             left: 0,
@@ -83,7 +83,7 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
           ),
 
-          // 📄 Card blanche
+
           Positioned.fill(
             top: 0.3.sh,
             child: Container(
@@ -101,7 +101,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      // Title
+
                       Text(
                         'Sign Up',
                         style: titleTextStyle.copyWith(
@@ -112,7 +112,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       SizedBox(height: 32.h),
 
-                      // Name Field
+
                       CustomTextField(
                         controller: nameController,
                         labelText: 'Full Name',
@@ -123,7 +123,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       SizedBox(height: 20.h),
 
-                      // Email Field
+
                       CustomTextField(
                         controller: emailController,
                         labelText: 'Email',
@@ -135,7 +135,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       SizedBox(height: 20.h),
 
-                      // Password Field
+
                       CustomTextField(
                         controller: passwordController,
                         labelText: 'Password',
@@ -160,7 +160,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 : null,
                       ),
                       
-                      // Password Validation UI
+
                       SizedBox(height: 10.h),
                       _buildValidationItem("At least 8 characters", _hasMinLength),
                       _buildValidationItem("Contains an uppercase letter", _hasUppercase),
@@ -169,7 +169,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
                       SizedBox(height: 40.h),
 
-                      // Sign Up Button
+
                       CustomButton(
                         text: 'Register',
                         isLoading: signUpViewModel.isLoading,
@@ -182,7 +182,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             );
 
                             if (errorMessage == null) {
-                              // Clear inputs
+
                               nameController.clear();
                               emailController.clear();
                               passwordController.clear();
@@ -192,7 +192,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   context,
                                   "Registration successful!",
                                 );
-                                // Navigate back to Login
+
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(builder: (context) => const LoginPage()),
@@ -211,7 +211,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       SizedBox(height: 24.h),
 
-                      // Footer - Navigate back to Login
+
                       GestureDetector(
                         onTap: () => Navigator.pushReplacement(
                             context,

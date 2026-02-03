@@ -3,7 +3,7 @@ import 'package:esame/core/them/color.dart';
 import 'package:esame/core/them/text_style.dart';
 
 class AppTheme {
-  // Obtenir le ThemeData pour le mode clair
+
   static ThemeData get lightTheme {
     return ThemeData(
       brightness: Brightness.light,
@@ -39,7 +39,7 @@ class AppTheme {
         titleMedium: subTitleTextStyle,
         labelLarge: buttonTextStyle,
       ),
-      // Input Decoration Theme could be added here later using text_styles
+
     );
   }
 }
